@@ -1,0 +1,112 @@
+*{
+padding: 0%;
+margin: 0%;
+}
+
+body{
+    overflow: hidden;
+    animation: shakebody linear 8s infinite;
+}
+
+@keyframes shakebody
+{
+    0%{  
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    position:absolute;
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    top: 70vh;
+    position: absolute;
+    animation: carMove linear 13s infinite;
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+.tree{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(trees.png);
+    background-repeat:repeat-x ;
+    background-size: cover;
+    position:absolute;
+    top: -144px;
+}
+
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom: 125px;
+    animation: shake linear .7s infinite;
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.wheel_left{
+    height: 69px;
+    width: 69px;
+    background-image: url(car_wheel_left.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 491px;
+    bottom: 115px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+.wheel_right{
+    height: 76px;
+    width: 75px;
+    background-image: url(car_wheel_right.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 679px;
+    bottom: 108px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
